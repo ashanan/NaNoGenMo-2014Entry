@@ -3,7 +3,8 @@ function ChapterKeeper(words, title){
 	this._chapters = {};
 
 	for(var i = 0; i < this._words.length; i++){
-		this._chapters[words[i]] = this._words[i] + ' in ' + title;
+		this._chapters[words[i]] = this._words[i] + ' in ' 
+								 + title + '\n\n';
 	}
 
 	this.process = function(line){
@@ -16,7 +17,10 @@ function ChapterKeeper(words, title){
 	};
 
 	this.print = function(){
-		console.log(this._chapters);
+		for(var i = 0;i < this._words.length;i++){
+			console.log(this._chapters[this._words[i]]);
+			console.log('\n');
+		}
 	};
 }
 
