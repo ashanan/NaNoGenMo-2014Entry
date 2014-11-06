@@ -4,7 +4,6 @@ var liner = require('./liner');
 var ChapterKeeper = require('./chapter-keeper');
 
 var source = process.argv[2];
-var word = process.argv[3];
 var words = process.argv.slice(3);
 
 var chapters = new ChapterKeeper(words, source);
